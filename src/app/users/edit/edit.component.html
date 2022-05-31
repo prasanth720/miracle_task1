@@ -1,0 +1,255 @@
+<p-card header="Update Employee">
+    <div class="card1">
+        <form [formGroup]="reactiveForm">
+            <div class="grid p-fluid">
+                <!-- <div class="grid p-fluid"> -->
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="integeronly">First Name<span style="color: red;">*</span></label>
+                    <input type="text"  pInputText class="p-inputtext-sm" id="integeronly" formControlName="FirstName"
+                        placeholder="First Name">
+                        <!-- <div *ngIf="reactiveForm.controls.FirstName.touched && reactiveForm.controls.FirstName.invalid">
+                            <span class="validationtest" style="color: red;">First name is required</span>
+                        </div>
+                            <div *ngIf="reactiveForm.controls.FirstName.errors?.pattern" style="color: red;">Enter only alphabets.</div> -->
+                            <div *ngIf="reactiveForm.controls.FirstName.touched && reactiveForm.controls.FirstName.invalid"
+                        style="color: red;">
+                        First name is required
+                    </div>
+                    <div *ngIf="reactiveForm.controls.FirstName.errors?.pattern" style="color: red;">Enter only
+                        alphabets.</div>
+                    <div *ngIf="reactiveForm.controls.FirstName.errors?.maxlength" style="color: red;">Please Enter 
+                        15 characters only</div>
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="withoutgrouping">Middle Name</label>
+                    <input type="text"  pInputText class="p-inputtext-sm" formControlName="MiddleName"
+                        placeholder="Middle Name">
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="minmaxfraction">Last Name<span style="color: red;">*</span></label>
+                    <input type="text"  pInputText class="p-inputtext-sm" formControlName="LastName"
+                        placeholder="Last Name">
+                        <!-- <div *ngIf="reactiveForm.controls.LastName.touched && reactiveForm.controls.LastName.invalid">
+                            <span class="validationtest" style="color: red;">last Name  is required</span>
+                        </div>
+                            <div *ngIf="reactiveForm.controls.LastName.errors?.pattern" style="color: red;">Enter only alphabets.</div> -->
+
+                            <div *ngIf="reactiveForm.controls.LastName.touched && reactiveForm.controls.LastName.invalid"
+                        style="color: red;">
+                        Last name is required
+                    </div>
+                    <div *ngIf="reactiveForm.controls.LastName.errors?.pattern" style="color: red;">Enter only
+                        alphabets.</div>
+                    <div *ngIf="reactiveForm.controls.LastName.errors?.maxlength" style="color: red;">Please Enter 
+                        15 characters only</div>
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="minmax">Employee Id<span style="color: red;">*</span> </label>
+                    <input type="text"  minlength="4" maxlength="10" readonly pInputText class="p-inputtext-sm"  formControlName="EmpID"
+                        placeholder="Employee Id">
+                        <!-- <div *ngIf="reactiveForm.controls.EmpID.touched && reactiveForm.controls.EmpID.invalid">
+                            <span class="validationtest" style="color: red;">numbers  is required</span>
+                        </div>
+                            <div *ngIf="reactiveForm.controls.EmpID.errors?.pattern" style="color: red;">Enter only numbers.</div> -->
+                            <div *ngIf="reactiveForm.controls.EmpID.touched && reactiveForm.controls.EmpID.invalid"
+                            style="color: red;">
+                            Employee id is required
+                        </div>
+                        <div *ngIf="reactiveForm.controls.EmpID.errors?.pattern" style="color: red;">Enter only
+                            numbers.</div>
+                        <div *ngIf="reactiveForm.controls.EmpID.errors?.maxlength" style="color: red;">Please Enter 
+                            15 digits only</div>
+
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Organization</label>
+                    <input type="text"  pInputText class="p-inputtext-sm" formControlName="Originzation"
+                        placeholder="Organization">
+    
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Department</label>
+
+                    <p-dropdown [options]="depart" placeholder="Department" class="p-inputtext-sm"
+                        formControlName="Department"  optionValue="name" optionLabel="name">
+                    </p-dropdown>
+    
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Swift Timing</label>
+
+                    <p-dropdown [options]="swift" placeholder="Swift Timing" class="p-inputtext-sm"
+                        formControlName="Swift_Timings" optionValue="timings" optionLabel="timings">
+                    </p-dropdown>
+        
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Status<span style="color: red;">*</span></label>
+                    <!-- <input type="text" pInputText class="p-inputtext-sm" formControlName="Status" placeholder="Status"> -->
+                    <p-dropdown [options]="status" optionValue="name"placeholder="Status" class="p-inputtext-sm" formControlName="Status"
+                        optionLabel="name">
+                    </p-dropdown>
+                    <div *ngIf="reactiveForm.controls.Status.touched && reactiveForm.controls.Status.invalid">
+                        <span class="validationtest" style="color: red;">Status is required</span>
+                    </div>
+                </div>
+
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="icon">Date of Joining</label>
+                    <!-- <p-calendar id="icon" placeholder="MM-DD-YYYY" dateFormat="mm-dd-yy" [showIcon]="true" [showButtonBar]="true"
+                        formControlName="doj"> </p-calendar> --><p-calendar id="popup" placeholder="yy-mm-dd" dateFormat="yy-mm-dd" [showIcon]="true"
+                    [showButtonBar]="true" formControlName="doj">
+                </p-calendar>
+                </div>
+
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Work Phone</label>
+                    <input type="text" maxlength="10"   pInputText class="p-inputtext-sm" formControlName="Work_Phone"
+                        placeholder="Work Phone">
+           
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Personal Phone<span style="color: red;">*</span> </label>
+                    <input type="text" maxlength="10"   pInputText class="p-inputtext-sm" formControlName="Personal_Phone"
+                        placeholder="Personal Phone">
+                        <!-- <div *ngIf="reactiveForm.controls.Personal_Phone.touched && reactiveForm.controls.Personal_Phone.invalid">
+                            <span class="validationtest" style="color: red;">Phone number is required</span>
+                        </div> -->
+                        <div *ngIf="reactiveForm.controls.Personal_Phone.touched && reactiveForm.controls.Personal_Phone.invalid"
+                        style="color: red;">
+                        Phone number is required
+                    </div>
+                    <div *ngIf="reactiveForm.controls.Personal_Phone.errors?.pattern" style="color: red;">Enter only
+                        numbers.</div>
+                    <div *ngIf="reactiveForm.controls.Personal_Phone.errors?.maxlength" style="color: red;">Please Enter 
+                        10 digits only</div>
+       
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Corporate Mail<span style="color: red;">*</span></label>
+                    <input type="mail" pInputText class="p-inputtext-sm" formControlName="Cooparate_mail"
+                        placeholder="Corporate Mail">
+                        <div *ngIf="reactiveForm.controls.Cooparate_mail.touched && reactiveForm.controls.Cooparate_mail.invalid">
+                            <span class="validationtest" style="color: red;">Corporate Mail  is required</span>
+                        </div>
+                            <div *ngIf="reactiveForm.controls.Cooparate_mail.errors?.pattern" style="color: red;">missing @..com/.in.</div>
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Personal Mail</label>
+                    <input type="mail" pInputText class="p-inputtext-sm" formControlName="Personal_mail"
+                        placeholder="Personal Mail">
+         
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Skills</label>
+                    <p-multiSelect [options]="lang" placeholder="Skills" optionValue="name" optionLabel="name" formControlName="Skills">
+                    </p-multiSelect>
+           
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3" >
+                    <label for="locale-user">Gender</label><br>
+                    <div class="field-radiobutton" class="p-inputtext-sm" style="padding-top:5px;">
+                        <p-radioButton name="gender" type="radio" value="male" formControlName="gender"
+                            inputId="gender"></p-radioButton>&nbsp;
+                        <label for="gender">Male</label> &nbsp;
+                        <p-radioButton name="gender" type="radio" value="female" formControlName="gender"
+                            inputId="gender"></p-radioButton>&nbsp;
+                        <label for="gender">Female</label>
+                    </div>
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-12">
+                    <h2>Social Media </h2>
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-4">
+                    <label for="locale-us">Facebook</label>
+
+                    <input type="mail" pInputText class="p-inputtext-sm" formControlName="Facebook"
+                        placeholder="Facebook">
+
+
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-4">
+                    <label for="locale-us">LinkedIn</label>
+
+
+                    <input type="mail" pInputText class="p-inputtext-sm" formControlName="LinkedIn"
+                        placeholder="LinkedIn">
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-4">
+                    <label for="locale-us">Twitter</label>
+
+
+                    <input type="mail" pInputText class="p-inputtext-sm" formControlName="Twitter"
+                        placeholder="Twitter">
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-12">
+                    <h2>Address</h2>
+                </div>
+                <div class="p-col-12 p-md-6 p-sm-12 p-lg-6">
+                    <label for="locale-us">Address1</label>
+                    <input type="text" pInputText class="p-inputtext-sm" formControlName="Address1"
+                        placeholder="Address1">
+                </div>
+                <div class="p-col-12 p-md-6 p-sm-12 p-lg-6">
+                    <label for="locale-us">Address2</label>
+                    <input type="text" pInputText class="p-inputtext-sm" formControlName="Address2"
+                        placeholder="Address2">
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Country<span style="color: red;">*</span></label>
+
+                    <p-dropdown [options]="country" placeholder="Country" class="p-inputtext-sm"
+                        formControlName="Country"  optionValue="name" optionLabel="name">
+                    </p-dropdown>
+                    <div *ngIf="reactiveForm.controls.Country.touched && reactiveForm.controls.Country.invalid">
+                        <span class="validationtest" style="color: red;">Country is required</span>
+                    </div>
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">State<span style="color: red;">*</span></label>
+                    <p-dropdown [options]="states" placeholder="State"  optionValue="name" class="p-inputtext-sm" formControlName="State"
+                        optionLabel="name">
+                    </p-dropdown>
+                    <div *ngIf="reactiveForm.controls.State.touched && reactiveForm.controls.State.invalid">
+                        <span class="validationtest" style="color: red;" >State is required</span>
+                    </div>
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">City<span style="color: red;">*</span></label>
+                    <input type="text"    pInputText class="p-inputtext-sm" formControlName="City" placeholder="City">
+                    <div *ngIf="reactiveForm.controls.City.touched && reactiveForm.controls.City.invalid">
+                        <span class="validationtest" style="color: red;">City is required</span>
+                    </div>
+                </div>
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-3">
+                    <label for="locale-us">Zip Code<span style="color: red;">*</span></label>
+                    <input type="text"  pInputText class="p-inputtext-sm" formControlName="zip" maxlength="" placeholder="Zip Code">
+                    <!-- <div *ngIf="reactiveForm.controls.zip.touched && reactiveForm.controls.zip.invalid">
+                        <span class="validationtest" style="color: red;">Zip code  is required</span>
+                    </div>
+                        <div *ngIf="reactiveForm.controls.zip.errors?.pattern" style="color: red;">Enter only numbers.</div> -->
+                        <div *ngIf="reactiveForm.controls.zip.touched && reactiveForm.controls.zip.invalid"
+                    style="color: red;">
+                    Zip code  is required
+                </div>
+                <div *ngIf="reactiveForm.controls.zip.errors?.pattern" style="color: red;">Enter only
+                    numbers.</div>
+                <div *ngIf="reactiveForm.controls.zip.errors?.maxlength" style="color: red;">Please Enter 
+                   maxlength 15 digits only</div>
+                
+                </div>
+            </div>
+           
+            <div class="btn">
+                <div class="p-col-12 p-md-12 p-sm-12 p-lg-12">
+                    <p-messages [(value)]="msgs"></p-messages>
+                    <a   pButton type="submit" style="padding: 5px;width: 99px;" (click)="onUpdate()"  icon="pi pi-refresh" label="Update"></a> &nbsp;
+                    <a   pButton type="reset" style="padding: 5px;width: 99px;" (click)="cancel()" icon="pi pi-times" label="Cancel"></a>
+                    <p-messages [(value)]="msgs1"></p-messages>
+                </div>
+            </div>
+            <div class="p-col-12 p-md-12 p-sm-12 p-lg-3" ></div>
+            <div class="p-col-12 p-md-12 p-sm-12 p-lg-3" ></div>
+        </form>
+    </div>
+</p-card>

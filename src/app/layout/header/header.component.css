@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+   .mat-toolbar{
+      background-color: white;
+      color: black;
+  
+       
+  } 
+  .position-fixed{
+    position: fixed;
+  }

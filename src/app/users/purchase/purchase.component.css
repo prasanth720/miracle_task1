@@ -1,0 +1,28 @@
+h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.add{
+    text-align: right;
+}
+
+#gridheader{
+    background-color:rgb(2, 125, 237);
+    color: white;
+}
+.search{
+    float: left;
+}
+
+.p-inputtext{
+    float: right;
+}
+.but_add{
+    float: right;
+}
+.button{
+    cursor: pointer;
+}
+.ui-tooltip {
+    background-color: red
+}

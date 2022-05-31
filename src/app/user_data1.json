@@ -1,0 +1,52 @@
+{
+	"users_data":[
+{
+    "Address1": "sdfas",
+    "Address2": "sdfasdf",
+    "City": {"name": "vishkapatanam"},
+    "Cooparate_mail": "prasanthsankurabothu@gmail.com",
+    "Country": {"name":"Albania", "code": "AL"},
+    "Department": "mca",
+    "EmpID": "12312",
+    "FirstName": "prasanth",
+    "LastName": "sankurabothu",
+    "MiddleName": "aaa",
+    "Originzation": "dasdfasd",
+    "Personal_Phone": "234234234",
+    "Personal_mail": "prasanthsankurabothu@gmail.com",
+    "Skills": {"name": "HTML"},
+    "State": {"name": "Andhra Pradesh"},
+    "Status": "sdfsdf",
+    "Swift_Timings": {"timings": "2PM - 11PM"},
+    "Work_Phone": "34234234234",
+    "doj": {},
+    "gender": "male",
+    "zip": "312312"
+},
+{
+    "Address1": "sdfas",
+    "Address2": "sdfasdf",
+    "City": {"name": "vishkapatanam"},
+    "Cooparate_mail": "prasanthsankurabothu@gmail.com",
+    "Country": {"name":"Albania", "code": "AL"},
+    "Department": "mca",
+    "EmpID": "12312",
+    "FirstName": "prasanth",
+    "LastName": "sankurabothu",
+    "MiddleName": "aaa",
+    "Originzation": "dasdfasd",
+    "Personal_Phone": "234234234",
+    "Personal_mail": "prasanthsankurabothu@gmail.com",
+    "Skills": {"name": "HTML"},
+    "State": {"name": "Andhra Pradesh"},
+    "Status": "sdfsdf",
+    "Swift_Timings": {"timings": "2PM - 11PM"},
+    "Work_Phone": "34234234234",
+    "doj": {},
+    "gender": "male",
+    "zip": "312312"
+}
+]
+
+
+}

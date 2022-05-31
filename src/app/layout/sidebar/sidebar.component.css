@@ -1,0 +1,13 @@
+.side-list{
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+/* a:active{
+    background-color: white;
+} */
+a:default{
+    background-color: rgb(55, 55, 56);
+}
